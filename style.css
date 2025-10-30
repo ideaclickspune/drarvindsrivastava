@@ -1,0 +1,1415 @@
+/* ============================================
+   GLOBAL STYLES & RESET
+   ============================================ */
+
+/* Reset all default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for consistent colors throughout the site */
+:root {
+    --primary: #1e40af;        /* Primary blue color */
+    --secondary: #0ea5e9;      /* Secondary light blue */
+    --dark: #1e293b;           /* Dark text color */
+    --light: #f8fafc;          /* Light background color */
+    --accent: #3b82f6;         /* Accent blue for highlights */
+}
+
+/* Base body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    overflow-x: hidden;        /* Prevent horizontal scrolling */
+}
+
+
+/* ============================================
+   NAVIGATION BAR STYLES
+   ============================================ */
+
+/* ============================================
+   NAVIGATION BAR STYLES
+   ============================================ */
+
+/* Navigation container - sticky at top */
+nav {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 1rem 0;
+    height: 115px;
+    position: sticky;           /* Stays at top when scrolling */
+    top: 0;
+    z-index: 1000;             /* Appears above other content */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Navigation inner container */
+nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo link wrapper - removes link styling */
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+/* Logo link hover effect */
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+/* Logo image styling */
+.logo-image {
+    height: 90px;              /* Keep navbar height stable */
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transform: scale(1.3);     /* Increases visible size */
+    transform-origin: left center;  /* Keeps scaling from left side */
+}
+
+/* Old text logo - can be removed or kept as fallback */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation menu list */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;                 /* Space between menu items */
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    transition: opacity 0.3s;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Link hover effect */
+nav a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  /* Make logo bigger */
+  .logo-image {
+    height: 70px;              /* slightly bigger but not oversized */
+    max-width: 180px;
+    transform: scale(2.5);     /* increase visible size */
+    transform-origin: left center; /* keep it aligned to left */
+  }
+
+  /* Allow navbar to auto-adjust height for larger logo */
+  nav {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+
+  /* Make sure hamburger and logo align correctly */
+  nav .container {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   (Screens 768px and below)
+   ============================================ */
+
+@media (max-width: 768px) {
+    
+    /* Smaller logo on mobile */
+    .logo-image {
+        height: 40px;          /* Smaller on mobile */
+        max-width: 150px;
+    }
+    
+    /* Adjust navigation padding for mobile */
+    nav .container {
+        padding: 0 1rem;
+    }
+    
+    /* ... rest of your mobile styles ... */
+}
+
+/* ============================================
+   HAMBURGER MENU (Mobile)
+   ============================================ */
+
+/* Hamburger icon - hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+/* Hamburger lines */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+
+/* Animated hamburger when active (becomes X) */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;               /* Middle line disappears */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+/* ============================================
+   HERO SECTION (Home/Landing)
+   ============================================ */
+
+/* Hero section with background image and gradient overlay */
+.hero {
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(14, 165, 233, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600') center/cover;
+    color: white;
+    padding: 2rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Decorative gradient overlay effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+}
+
+/* Hero content grid - 2 columns on desktop */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    /* Left: content, Right: image */
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero text content */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+}
+
+.hero-content .credentials {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Hero image container */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+
+/* ============================================
+   STATISTICS COUNTER SECTION (NEW)
+   Separate section below hero with white background
+   ============================================ */
+
+/* Statistics section container */
+.stats-section {
+    background: white;
+    padding: 1rem 1rem;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.05);
+}
+
+/* Statistics grid - 3 columns */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual stat box */
+.stat-box {
+    text-align: center;
+    padding: 0.2rem 1rem;
+    border-radius: 10px;
+    background: #f8fafc;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+/* Hover effect on stat boxes */
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.1);
+    border-color: var(--accent);
+}
+
+/* Stat number (the counter) - colored */
+.stat-box .stat-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Stat label (description text) */
+.stat-box .stat-label {
+    font-size: 1.1rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+
+/* ============================================
+   COMMON SECTION STYLES
+   ============================================ */
+
+/* Standard section padding */
+section {
+    padding: 2rem 2rem;
+}
+
+/* Standard container for content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section title styling */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+    position: relative;
+}
+
+/* Decorative line under section title */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+/* Light background for about section */
+#about {
+    background: var(--light);
+}
+
+/* About content grid - image left, text right */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;    /* Image takes 1/3, text takes 2/3 */
+    gap: 3rem;
+    align-items: start;
+}
+
+/* About image container */
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* About text styling */
+.about-text h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #475569;
+    text-align: justify;
+}
+
+
+/* ============================================
+   EXPERTISE SECTION
+   ============================================ */
+
+/* Expertise cards grid - auto-fit columns */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual expertise card */
+.expertise-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--accent);    /* Colored top border */
+}
+
+/* Card hover effect - lifts up */
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.expertise-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Remove default list bullets */
+.expertise-card ul {
+    list-style: none;
+}
+
+/* Custom arrow bullets for list items */
+.expertise-card li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #475569;
+}
+
+.expertise-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+
+/* ============================================
+   CAROUSEL SECTIONS
+   (Experience, Education, Publications, etc.)
+   ============================================ */
+
+/* Carousel outer container */
+.carousel-container {
+    position: relative;
+    overflow: hidden;          /* Hide items outside view */
+    padding: 0 4rem;          /* Space for arrow buttons */
+}
+
+/* Carousel items wrapper - flexbox for horizontal layout */
+.carousel-wrapper {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);    /* Smooth slide animation */
+    padding: 1rem 0;
+}
+
+/* Individual carousel item */
+.carousel-item {
+    min-width: calc(33.333% - 1.5rem);    /* 3 items visible on desktop */
+    flex-shrink: 0;                        /* Prevent shrinking */
+}
+
+/* Carousel navigation buttons (arrows) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;              /* Circular button */
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Button hover effect */
+.carousel-btn:hover {
+    background: var(--primary);
+    transform: translateY(-50%) scale(1.1);    /* Slightly larger on hover */
+}
+
+/* Button press effect */
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Position previous button on left */
+.carousel-btn.prev {
+    left: 0;
+}
+
+/* Position next button on right */
+.carousel-btn.next {
+    right: 0;
+}
+
+
+/* ============================================
+   EXPERIENCE SECTION CARDS
+   ============================================ */
+
+/* Light background for experience section */
+#experience {
+    background: var(--light);
+}
+
+/* Timeline/Experience card styling */
+.timeline-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.timeline-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Time period in accent color */
+.timeline-card .period {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.timeline-card p {
+    color: #475569;
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+}
+
+/* Experience Section ChatGpt  */
+#experience {
+  background: var(--light);
+  padding: 2rem 2rem;
+  position: relative;
+}
+
+/* Create center line */
+.experience-grid {
+  position: relative;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.experience-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0.4;
+}
+
+/* Each experience card */
+.exp-card {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.exp-card.left {
+  left: 0;
+  text-align: right;
+}
+
+.exp-card.right {
+  left: 50%;
+}
+
+/* Card content */
+.exp-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  border-left: 5px solid var(--accent);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.exp-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.exp-content h3 {
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.exp-content .period {
+  color: var(--accent);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.exp-content p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin: 0.2rem 0;
+}
+
+/* Small connecting dot */
+.exp-card::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--accent);
+  z-index: 1;
+}
+
+.exp-card.left::before {
+  right: -8px;
+}
+
+.exp-card.right::before {
+  left: -8px;
+}
+
+/* ✅ Responsive (stack vertically on mobile) */
+@media (max-width: 768px) {
+  .experience-grid::before {
+    left: 10px;
+  }
+  .exp-card,
+  .exp-card.left,
+  .exp-card.right {
+    width: 100%;
+    padding-left: 2rem;
+    text-align: left;
+    left: 0;
+  }
+  .exp-card::before {
+    left: 0;
+  }
+}
+
+
+/* Animation setup */
+.exp-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.exp-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: for smoother left-right feel */
+.exp-card.left {
+  transform: translateX(-60px);
+}
+.exp-card.right {
+  transform: translateX(60px);
+}
+.exp-card.left.show,
+.exp-card.right.show {
+  transform: translateX(0);
+}
+
+
+/* Experience section ChatGpt ENDS  */
+
+/* ============================================
+   EDUCATION SECTION CARDS
+   ============================================ */
+
+/* Education grid - 2 columns, 2 rows */
+/* .education-grid { */
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr);   comment this line--> 2 columns */
+    /* gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+} */
+
+/* Education card with gradient background */
+/* .education-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+} */
+
+/* Hover effect on education cards */
+/* .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.education-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-card .institution {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 0.3rem;
+}
+
+.education-card .year {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+ */
+
+/* ChatGpt CSS  */
+/* =========================================
+   EDUCATION GRID (No Carousel)
+   ========================================= */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.education-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.education-card .institution {
+  color: var(--dark);
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.education-card .year {
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* ✅ Mobile responsive: stack all cards vertically */
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ChatGpt CSS ENDS  */
+
+
+/* ============================================
+   PUBLICATIONS SECTION CARDS
+   ============================================ */
+
+/* Light background for publications section */
+#publications {
+    background: var(--light);
+}
+
+/* Publication card with left border accent */
+.publication-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);    /* Colored left border */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.publication-card p {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+
+/* ============================================
+   RESEARCH SECTION CARDS
+   ============================================ */
+
+/* Research card styling */
+.research-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.research-card h4 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.research-card .year {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+/* ============================================
+   AWARDS SECTION CARDS
+   ============================================ */
+
+/* Light background for awards section */
+#awards {
+    background: var(--light);
+}
+
+/* Award card styling */
+.award-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+/* Award card hover - slight zoom effect */
+.award-card:hover {
+    transform: scale(1.05);
+}
+
+/* Award icon (emoji) */
+.award-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+.award-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    transition: transform 0.3s ease;
+}
+.award-icon svg {
+  width: 60px;
+  height: 60px;
+  color: var(--primary);   /* controls the SVG 'currentColor' */
+  transition: color .25s ease, transform .3s ease;
+}
+
+.award-card:hover .award-icon svg {
+  color: #0ea5e9;
+  transform: scale(1.1);
+}
+
+
+.award-card:hover .award-icon img {
+    transform: scale(1.1);
+}
+.award-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.award-card .year {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+
+/* ============================================
+   MEMBERSHIPS SECTION CARDS
+   ============================================ */
+
+/* Membership card with left border */
+/* .membership-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--accent);
+    height: 100%;
+}
+
+.membership-card h4 {
+    color: var(--primary);
+    font-size: 1rem;
+} */
+
+.memberships-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.subheading {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Leadership Cards */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.leadership-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  border-top: 4px solid var(--accent);
+  transition: transform 0.3s;
+}
+
+.leadership-card:hover {
+  transform: translateY(-5px);
+}
+
+.award-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-card h4 {
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+/* Membership List */
+.memberships-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.memberships-list li {
+  background: #f8f9fa;
+  border-left: 4px solid var(--accent);
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .memberships-grid {
+    grid-template-columns: 1fr;
+  }
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#memberships {
+  margin-bottom: 0;         /* Removes external spacing */
+  padding-bottom: 1rem;     /* Reduce inner space (you can tweak this) */
+}
+
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+/* Contact section with gradient background */
+#contact {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+}
+
+/* White section title for dark background */
+#contact .section-title {
+    color: white;
+}
+
+#contact .section-title::after {
+    background: white;
+}
+
+/* Contact grid - 4 columns for office, phone, registration, map */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Individual contact info box */
+.contact-item {
+    background: rgba(255,255,255,0.1);    /* Semi-transparent */
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);          /* Frosted glass effect */
+}
+
+.contact-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.contact-item strong {
+    display: block;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Map container specific styling */
+.map-container iframe {
+    margin-top: 1rem;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.contact-item a {
+  color: inherit;             /* same color as normal text */
+  text-decoration: none;      /* remove underline */
+  font-weight: inherit;       /* keep same boldness */
+}
+
+.contact-item a:hover {
+         /* optional: color change on hover */
+  text-decoration: underline; /* optional hover effect */
+}
+
+
+/* Floating Buttons CSS  */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.floating-buttons a img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.floating-buttons a img:hover {
+  transform: scale(1.1);
+}
+
+.custom-border {
+    border: 2px solid #045879;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #ffffff; /* optional */
+}
+
+
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   (Screens 768px and below)
+   ============================================ */
+
+@media (max-width: 768px) {
+    
+    /* Smaller logo on mobile */
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Navigation adjustments */
+    nav .container {
+        padding: 0 1rem;
+    }
+
+    /* Mobile menu - dropdown style */
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;              /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    /* Show menu when active */
+    nav ul.active {
+        max-height: 500px;
+    }
+
+    /* Menu item separators */
+    nav ul li {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Full-width clickable links */
+    nav ul a {
+        display: block;
+        padding: 1rem 1rem;
+    }
+
+    /* Hero section mobile adjustments */
+    .hero {
+        padding: 3rem 1rem;
+        min-height: auto;
+    }
+
+    /* Single column layout */
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Reorder: image first, then content */
+    .hero-content {
+        order: 2;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    /* Smaller text on mobile */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-content .credentials {
+        font-size: 0.9rem;
+    }
+
+    /* Statistics section mobile */
+    .stats-section {
+        padding: 2rem 1rem;
+    }
+
+    /* Single column stats on mobile */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-box {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-box .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-box .stat-label {
+        font-size: 0.95rem;
+    }
+
+    /* Reduce section padding on mobile */
+    section {
+        padding: 3rem 1rem;
+    }
+
+    /* Smaller section titles */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* About section - single column */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image img {
+        max-width: 250px;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    /* Expertise grid - single column */
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .expertise-card {
+        padding: 1.5rem;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .expertise-card li {
+        font-size: 0.9rem;
+    }
+
+    /* Carousel mobile adjustments */
+    .carousel-container {
+        padding: 0 3rem;        /* Less padding for smaller buttons */
+    }
+
+    /* Show only 1 item at a time on mobile */
+    .carousel-item {
+        min-width: 100%;
+    }
+
+    /* Smaller carousel buttons */
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-btn.prev {
+        left: 0;
+    }
+
+    .carousel-btn.next {
+        right: 0;
+    }
+
+    /* Reduce card padding on mobile */
+    .timeline-card,
+    .education-card,
+    .publication-card,
+    .research-card,
+    .award-card,
+    .membership-card {
+        padding: 1.2rem;
+    }
+
+    /* Education grid - single column on mobile */
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Smaller card titles */
+    .timeline-card h3,
+    .education-card h3,
+    .award-card h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Smaller text in cards */
+    .timeline-card p,
+    .publication-card p,
+    .research-card h4 {
+        font-size: 0.85rem;
+    }
+
+    /* Contact grid - single column */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+    }
+
+    .contact-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Footer mobile adjustments */
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ============================================
+   TABLET RESPONSIVE STYLES
+   (Screens between 769px and 1024px)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    /* Smaller hero title */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Show 2 items in carousel on tablet */
+    .carousel-item {
+        min-width: calc(50% - 1rem);
+    }
+
+    /* Expertise grid - 2 columns on tablet */
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Education grid stays 2 columns on tablet */
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

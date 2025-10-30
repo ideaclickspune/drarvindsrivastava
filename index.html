@@ -3,660 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Arvind Kumar Srivastava - Neurosurgeon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
+    <!-- Primary Meta Tags -->
+    <title>Dr. Arvind Kumar Srivastava - Neurosurgeon | G.B. Pant Institute, New Delhi</title>
+    <meta name="title" content="Dr. Arvind Kumar Srivastava - Neurosurgeon | G.B. Pant Institute, New Delhi">
+    <meta name="description" content="Dr. Arvind Kumar Srivastava - Director-Professor & Consultant Neurosurgeon with 40+ years experience. Specializing in functional neurosurgery, neuro-oncology, skull base surgery, and cerebrovascular surgery at G.B. Pant Institute, New Delhi.">
+    <meta name="keywords" content="Dr Arvind Kumar Srivastava, neurosurgeon Delhi, brain surgery Delhi, G.B. Pant Hospital, neurosurgery specialist, skull base surgery, neuro-oncology, cerebrovascular surgery, functional neurosurgery, best neurosurgeon New Delhi">
+    <meta name="author" content="Dr. Arvind Kumar Srivastava">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+ 
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="IN-DL">
+    <meta name="geo.placename" content="New Delhi">
+    <meta name="geo.position" content="28.638333;77.229999">
+    <meta name="ICBM" content="28.638333, 77.229999">
+    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#1e40af">
+    <meta name="msapplication-TileColor" content="#1e40af">
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        :root {
-            --primary: #1e40af;
-            --secondary: #0ea5e9;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --accent: #3b82f6;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(14, 165, 233, 0.95) 100%),
-                        url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600') center/cover;
-            color: white;
-            padding: 8rem 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
-        }
-
-        .hero .credentials {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            animation: fadeInUp 0.8s ease 0.6s backwards;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        #about {
-            background: var(--light);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .about-text h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-            color: #475569;
-        }
-
-        .highlight-box {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .highlight-box h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Expertise Section */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .expertise-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--accent);
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .expertise-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .expertise-card ul {
-            list-style: none;
-        }
-
-        .expertise-card li {
-            padding: 0.4rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: #475569;
-        }
-
-        .expertise-card li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        /* Experience Section */
-        #experience {
-            background: var(--light);
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: var(--accent);
-        }
-
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            grid-column: 1;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) .timeline-empty {
-            grid-column: 2;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .timeline-content h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content .period {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: var(--accent);
-            border: 4px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px var(--light);
-        }
-
-        /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .education-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .education-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .institution {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .year {
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        /* Publications Section */
-        #publications {
-            background: var(--light);
-        }
-
-        .publications-list {
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .publication-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
-
-        .publication-item:hover {
-            transform: translateX(5px);
-        }
-
-        .publication-item p {
-            color: #475569;
-            line-height: 1.8;
-        }
-
-        /* Research Section */
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-
-        .research-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .research-card h4 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-        }
-
-        .research-card .year {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Awards Section */
-        #awards {
-            background: var(--light);
-        }
-
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .award-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .award-card:hover {
-            transform: scale(1.05);
-        }
-
-        .award-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .award-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        .award-card .year {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* Memberships Section */
-        .memberships-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .membership-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--accent);
-        }
-
-        .membership-item h4 {
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-        }
-
-        #contact .section-title {
-            color: white;
-        }
-
-        #contact .section-title::after {
-            background: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .contact-card {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-card h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: start;
-            margin-bottom: 1rem;
-            gap: 1rem;
-        }
-
-        .contact-item strong {
-            min-width: 100px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-wrap: wrap;
-                gap: 1rem;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline-item:nth-child(even) .timeline-content {
-                grid-column: 1;
-                text-align: left;
-            }
-
-            .timeline-marker {
-                left: 0;
-                transform: translateX(-50%);
-            }
-
-            nav .container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">Dr. A.K. Srivastava</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+  <!-- ============================================
+     NAVIGATION BAR
+     Sticky navigation menu at the top
+     ============================================ -->
+<nav>
+    <div class="container">
+        <!-- Logo Image (replaces text logo) -->
+        <a href="index.html" class="logo-link">
+            <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. A.K. Srivastava Logo" class="logo-image">
+        </a>
+        
+        <!-- Hamburger Icon for Mobile Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+        
+        <!-- Navigation Menu Items -->
+        <ul id="navMenu">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
+            <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+            <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+            <li><a href="#awards" onclick="closeMenu()">Awards</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    
 
-    <!-- Hero Section -->
+    <!-- ============================================
+         HERO SECTION
+         Main landing section with doctor's intro
+         ============================================ -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Dr. Arvind Kumar Srivastava</h1>
-            <p class="subtitle">Director-Professor & Consultant Neurosurgeon</p>
-            <p class="credentials">M.B.B.S., M.S. (Gen. Surgery), M.Ch. (Neurosurgery)</p>
-            <p class="credentials">G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">40+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-label">Publications</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Research Supervisions</span>
-                </div>
+        <div class="hero-container">
+            <!-- Left Side: Doctor's Information -->
+            <div class="hero-content">
+                <h1>Dr. Arvind Kumar Srivastava</h1>
+                <p class="subtitle">Director-Professor & Consultant Neurosurgeon</p>
+                <p class="credentials">M.B.B.S., M.S. (Gen. Surgery), M.Ch. (Neurosurgery)</p>
+                <p class="credentials">G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
             </div>
+            
+            <!-- Right Side: Doctor's Photo -->
+            <div class="hero-image">
+                <img src="assets/img/Dr. Srivastav Image.png" alt="Dr. Arvind Kumar Srivastava">
+            </div>
+
+            <!-- Statistics Section - Spans full width -->
+            <!-- <div class="hero-stats"> -->
+                <!-- Years of Experience Counter -->
+                <!-- <div class="stat"> -->
+                    <!-- <span class="stat-number" data-target="40">0</span> -->
+                    <!-- <span class="stat-label">Years Experience</span> -->
+                <!-- </div> -->
+                
+                <!-- Publications Counter -->
+                <!-- <div class="stat"> -->
+                    <!-- <span class="stat-number" data-target="100">0</span> -->
+                    <!-- <span class="stat-label">Publications</span> -->
+                <!-- </div> -->
+                
+                <!-- Research Supervisions Counter -->
+                <!-- <div class="stat"> -->
+                    <!-- <span class="stat-number" data-target="15">0</span> -->
+                    <!-- <span class="stat-label">Research Supervisions</span> -->
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
     </section>
 
-    <!-- About Section -->
+<!-- Statistics Section -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="stat-number" data-target="40">40+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="100">100+</span>
+      <span class="stat-label">Publications</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="15">15+</span>
+      <span class="stat-label">Research Supervisions</span>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ============================================
+         ABOUT SECTION
+         Biography and background information
+         ============================================ -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Dr. Srivastava</h2>
+            
             <div class="about-content">
+                <!-- Left Side: Doctor's Photo (different from hero) -->
                 <div class="about-image">
-                    <img src="img/Dr. Srivastav Image.png" alt="Dr. Arvind Kumar Srivastava">
+                    <img src="assets/img/Dr.Arvind_Seating.png" alt="Dr. Arvind Kumar Srivastava">
                 </div>
+                
+                <!-- Right Side: Biography Text -->
                 <div class="about-text">
                     <h3>Distinguished Neurosurgeon & Academic Leader</h3>
                     <p>Dr. Arvind Kumar Srivastava is a highly accomplished neurosurgeon with over four decades of clinical excellence and academic contributions. Currently serving as Director-Professor and Consultant in the Department of Neurosurgery at G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi, he leads Unit II and oversees the Neurosurgery ICU.</p>
                     
-                    <p>With extensive training in functional and stereotactic neurosurgery from Amsterdam Medical University, Dr. Srivastava has pioneered numerous neurosurgical techniques and contributed significantly to medical education in India. His expertise spans craniocerebral trauma, neuro-oncology, cerebrovascular diseases, and skull base surgery.</p>
-
-                    <div class="highlight-box">
-                        <h4>Special Recognition</h4>
-                        <p>Dr. Srivastava was personally deputed by the Government of India to provide neurosurgical care during the Hon'ble President's visit to Andaman & Nicobar Islands (1994) and was part of the first medical relief team to reach Bhuj during the Gujarat earthquake (2001).</p>
-                    </div>
-
-                    <div class="highlight-box">
-                        <h4>Leadership Roles</h4>
-                        <p>President, Delhi Neurological Association (2020) | NSI Board of Examiners - North India Chairman | Life Member of multiple prestigious medical societies</p>
-                    </div>
+                    <p>With extensive training in functional and stereotactic neurosurgery from Amsterdam Medical University, Dr. Srivastava has pioneered numerous neurosurgical techniques and contributed significantly to medical education in India. His expertise spans craniocerebral trauma, neuro-oncology, cerebrovascular diseases, and skull base surgery. He has been honored with prestigious awards including the Chikitsa Ratna Award and serves as President of the Delhi Neurological Association.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section -->
+    <!-- ============================================
+         EXPERTISE SECTION
+         Areas of medical specialization
+         ============================================ -->
     <section id="expertise">
         <div class="container">
             <h2 class="section-title">Areas of Expertise</h2>
+            
+            <!-- Grid of Expertise Cards -->
             <div class="expertise-grid">
+                
+                <!-- Expertise Card 1 -->
                 <div class="expertise-card">
                     <h3>Functional & Stereotactic Neurosurgery</h3>
                     <ul>
@@ -666,6 +176,7 @@
                     </ul>
                 </div>
 
+                <!-- Expertise Card 2 -->
                 <div class="expertise-card">
                     <h3>Craniocerebral & Spinal Trauma</h3>
                     <ul>
@@ -675,6 +186,7 @@
                     </ul>
                 </div>
 
+                <!-- Expertise Card 3 -->
                 <div class="expertise-card">
                     <h3>Neuro-Oncology</h3>
                     <ul>
@@ -684,6 +196,7 @@
                     </ul>
                 </div>
 
+                <!-- Expertise Card 4 -->
                 <div class="expertise-card">
                     <h3>Skull Base Surgery</h3>
                     <ul>
@@ -693,6 +206,7 @@
                     </ul>
                 </div>
 
+                <!-- Expertise Card 5 -->
                 <div class="expertise-card">
                     <h3>Cerebrovascular Surgery</h3>
                     <ul>
@@ -702,6 +216,7 @@
                     </ul>
                 </div>
 
+                <!-- Expertise Card 6 -->
                 <div class="expertise-card">
                     <h3>Specialized Procedures</h3>
                     <ul>
@@ -715,460 +230,353 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Director-Professor & Consultant</h3>
-                        <span class="period">Aug 2013 - May 2022</span>
-                        <p>G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
-                        <p>Head of Unit II, In-charge Neurosurgery ICU</p>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-empty"></div>
-                </div>
+    <!-- ============================================
+         EXPERIENCE SECTION
+         Professional career timeline (Horizontal Carousel)
+         ============================================ -->
+ 
 
-                <div class="timeline-item">
-                    <div class="timeline-empty"></div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Professor (Neurosurgery)</h3>
-                        <span class="period">Aug 2006 - Aug 2013 (7 Years)</span>
-                        <p>G.B. Pant Hospital, New Delhi</p>
-                    </div>
-                </div>
+    <!-- Exoerience section ChatGpt  -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Associate Professor</h3>
-                        <span class="period">Aug 2002 - Aug 2006 (4 Years)</span>
-                        <p>G.B. Pant Hospital, New Delhi</p>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-empty"></div>
-                </div>
+    <div class="experience-grid">
 
-                <div class="timeline-item">
-                    <div class="timeline-empty"></div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Neurosurgeon (Specialist Grade II)</h3>
-                        <span class="period">Aug 1995 - Aug 2002 (7 Years)</span>
-                        <p>Dr. Ram Manohar Lohia Hospital, New Delhi</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Senior Resident (Neurosurgery)</h3>
-                        <span class="period">Jun 1989 - Jan 1993 (3.5 Years)</span>
-                        <p>G.B. Pant Hospital, New Delhi (Post Doctoral Student)</p>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-empty"></div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-empty"></div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Senior Resident (Neurosurgery)</h3>
-                        <span class="period">Apr 1984 - Apr 1987 (3 Years)</span>
-                        <p>Safdarjung Hospital, New Delhi</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Step 1 -->
+      <div class="exp-card left">
+        <div class="exp-content">
+          <h3>Director-Professor & Consultant</h3>
+          <span class="period">Aug 2013 - May 2022 (9 Years)</span>
+          <p>G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
+          <p>Head of Unit II, In-charge Neurosurgery ICU</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Academic Qualifications</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>M.Ch. (Neurosurgery)</h3>
-                    <p class="institution">University of Delhi</p>
-                    <p class="institution">G.B. Pant Hospital, Maulana Azad Medical College</p>
-                    <p class="year">June 1991 - First Attempt</p>
-                </div>
-
-                <div class="education-card">
-                    <h3>M.S. (General Surgery)</h3>
-                    <p class="institution">University of Kanpur</p>
-                    <p class="institution">G.S.V.M. Medical College</p>
-                    <p class="year">May 1983 - First Attempt</p>
-                </div>
-
-                <div class="education-card">
-                    <h3>M.B.B.S.</h3>
-                    <p class="institution">University of Kanpur</p>
-                    <p class="institution">G.S.V.M. Medical College</p>
-                    <p class="year">February 1979 - All Subjects First Attempt</p>
-                </div>
-            </div>
-
-            <!-- <div class="highlight-box" style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h4>Specialized Training</h4>
-                <p><strong>Functional and Stereotactic Neurosurgery</strong></p>
-                <p>Amsterdam Medical University, Amsterdam, Netherlands</p>
-            </div> -->
+      <!-- Step 2 -->
+      <div class="exp-card right">
+        <div class="exp-content">
+          <h3>Professor (Neurosurgery)</h3>
+          <span class="period">Aug 2006 - Aug 2013 (7 Years)</span>
+          <p>G.B. Pant Hospital, New Delhi</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Publications Section -->
-    <section id="publications">
-        <div class="container">
-            <h2 class="section-title">Recent Publications & Research</h2>
-            
-            <h3 style="color: var(--primary); margin-bottom: 2rem; font-size: 1.8rem;">Selected Publications</h3>
-            <div class="publications-list">
-                <div class="publication-item">
-                    <p><strong>Jagetia A, Singh D, Srivastava AK, Singh AK.</strong> History of The Department of Neurosurgery, G. B. Pant Hospital, New Delhi. <em>Neurol India.</em> 2017;65(6):1366-1377.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p><strong>Gupta RK, Saran RK, Srivastava AK, Jagetia A, Garg L, Sharma MC.</strong> T cell lymphoblastic lymphoma/leukemia within an adrenocorticotropic hormone and thyroid stimulating hormone positive pituitary adenoma: A cytohistological correlation emphasizing importance of intra-operative squash smear. <em>Neuropathology.</em> 2017;37(4):358-364.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p><strong>Kumar V, Jagetia A, Singh D, Srivastava AK, Tandon MS.</strong> Comparison of Efficacy of Intraoperative Indocyanine Green Videoangiography in Clipping of Anterior Circulation Aneurysms with Postoperative Digital Subtraction Angiography. <em>J Neurosci Rural Pract.</em> 2017;8(3):342-345.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p><strong>Dutta G, Jagetia A, Srivastava AK, Singh D, Singh H, Saran RK.</strong> A "crick" in the neck followed by massage offered him a stroke: An uncommon case of vertebral artery dissection. <em>World Neurosurg.</em> 2018 Apr 10.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p><strong>Dutta G, Singh D, Singh H, Srivastava AK, Jagetia A, Agrawal A.</strong> Dorsal hemangioblastoma manifesting as holocord syringomyelia. <em>Surg Neurol Int</em> 2018;9:73.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p>Microvascular decompression for Trigeminal neuralgia: Experience of a tertiary care center in India and a brief review of literature. <em>Neurology India</em> March-April 2021, Vol.69, Supplement 1.</p>
-                </div>
-
-                <div class="publication-item">
-                    <p>An institutional experience of fenestrated T bar clip use in management of intracranial aneurysms. <em>Neurology India</em></p>
-                </div>
-            </div>
-
-            <h3 style="color: var(--primary); margin: 3rem 0 2rem; font-size: 1.8rem;">Research Supervision (Recent)</h3>
-            <div class="research-grid">
-                <div class="research-card">
-                    <h4>Role of MR Tractography in preoperative planning and postoperative evaluation in brain tumors</h4>
-                    <p class="year">2003-2006</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Endoscopic assisted microsurgical excision of cerebellopontine angle masses: A prospective study</h4>
-                    <p class="year">2009-2012</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Intraoperative monitoring of trigeminal and facial nerve and outcome after cerebellopontine angle surgery</h4>
-                    <p class="year">2010-2013</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Evaluation of the role of stereotactic biopsy in the diagnosis of neoplastic and nonneoplastic lesions</h4>
-                    <p class="year">2011-2014</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>A study of surgical outcome in patients with Chiari malformation Type I</h4>
-                    <p class="year">2012-2015</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Role of intraoperative Indocyanine green videoangiography in parasagittal and convexity meningioma surgery</h4>
-                    <p class="year">2013-2016</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Clinicopathological and Radiological analysis of posterior fossa tumors and treatment outcome</h4>
-                    <p class="year">2014-2017</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Craniosynostosis: To study the spectrum and outcome of surgical intervention</h4>
-                    <p class="year">2014-2017</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Association of SOX 17 gene with intracranial aneurysm</h4>
-                    <p class="year">2019-2021</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Assessment of association between xrcc7 gene polymorphisms and glioma: A prospective observational study</h4>
-                    <p class="year">2019-2021</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Factors affecting surgical outcome in patients of trigeminal neuralgia following microvascular decompression surgery</h4>
-                    <p class="year">2018-2020</p>
-                </div>
-
-                <div class="research-card">
-                    <h4>Surgical and functional outcome following intracranial aneurysm surgery</h4>
-                    <p class="year">2018-2020</p>
-                </div>
-            </div>
+      <!-- Step 3 -->
+      <div class="exp-card left">
+        <div class="exp-content">
+          <h3>Associate Professor</h3>
+          <span class="period">Aug 2002 - Aug 2006 (4 Years)</span>
+          <p>G.B. Pant Hospital, New Delhi</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Awards Section -->
+      <!-- Step 4 -->
+      <div class="exp-card right">
+        <div class="exp-content">
+          <h3>Neurosurgeon (Specialist Grade II)</h3>
+          <span class="period">Aug 1995 - Aug 2002 (7 Years)</span>
+          <p>Dr. Ram Manohar Lohia Hospital, New Delhi</p>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="exp-card left">
+        <div class="exp-content">
+          <h3>Senior Resident (Neurosurgery)</h3>
+          <span class="period">Jun 1989 - Jan 1993 (3.5 Years)</span>
+          <p>G.B. Pant Hospital, New Delhi</p>
+          <p>Post Doctoral Student</p>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="exp-card right">
+        <div class="exp-content">
+          <h3>Senior Resident (Neurosurgery)</h3>
+          <span class="period">Apr 1984 - Apr 1987 (3 Years)</span>
+          <p>Safdarjung Hospital, New Delhi</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    
+    <!-- Experience Section ChatGpt END  -->
+
+
+    <!-- ============================================
+         EDUCATION SECTION
+         Academic qualifications (Horizontal Carousel)
+         ============================================ -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Academic Qualifications</h2>
+
+    <div class="education-grid">
+      <!-- Education Card 1 -->
+      <div class="education-card">
+        <h3>M.Ch. (Neurosurgery)</h3>
+        <p class="institution">University of Delhi</p>
+        <p class="institution">G.B. Pant Hospital, Maulana Azad Medical College</p>
+        <p class="year">June 1991 - First Attempt</p>
+      </div>
+
+      <!-- Education Card 2 -->
+      <div class="education-card">
+        <h3>M.S. (General Surgery)</h3>
+        <p class="institution">University of Kanpur</p>
+        <p class="institution">G.S.V.M. Medical College</p>
+        <p class="year">May 1983 - First Attempt</p>
+      </div>
+
+      <!-- Education Card 3 -->
+      <div class="education-card">
+        <h3>M.B.B.S.</h3>
+        <p class="institution">University of Kanpur</p>
+        <p class="institution">G.S.V.M. Medical College</p>
+        <p class="year">February 1979 - All Subjects First Attempt</p>
+      </div>
+
+      <!-- Education Card 4 -->
+      <div class="education-card">
+        <h3>Specialized Training</h3>
+        <p class="institution">Functional and Stereotactic Neurosurgery</p>
+        <p class="institution">Amsterdam Medical University</p>
+        <p class="year">Netherlands</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+    <!-- ============================================
+         AWARDS SECTION
+         Awards and recognitions (Horizontal Carousel)
+         ============================================ -->
     <section id="awards">
         <div class="container">
             <h2 class="section-title">Awards & Recognition</h2>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon">🏆</div>
-                    <h3>Chikitsa Ratna Award</h3>
-                    <p>Indian Medical Association</p>
-                    <p class="year">July 2010</p>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">💎</div>
-                    <h3>Gems of the Gems Award</h3>
-                    <p>Gems Delhi</p>
-                    <p class="year">2014</p>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">🎓</div>
-                    <h3>Distinguished Alumnus Award</h3>
-                    <p>Gems</p>
-                    <p class="year">2015</p>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">🏅</div>
-                    <h3>Certificate of Honour</h3>
-                    <p>High School Excellence</p>
-                    <p class="year">1971</p>
-                </div>
-            </div>
-
-            <h3 style="color: var(--primary); margin: 4rem 0 2rem; font-size: 1.8rem; text-align: center;">Academic Scholarships</h3>
-            <div class="highlight-box" style="max-width: 800px; margin: 0 auto;">
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">Merit Scholarship - Class IX & X</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">National Merit Scholarship - Class XI & XII</li>
-                    <li style="padding: 0.5rem 0;">National Merit Scholarship - M.B.B.S (4.5 years)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Memberships Section -->
-    <section id="memberships">
-        <div class="container">
-            <h2 class="section-title">Professional Memberships & Leadership</h2>
             
-            <h3 style="color: var(--primary); margin-bottom: 2rem; font-size: 1.5rem;">Current Leadership Positions</h3>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon">👔</div>
-                    <h3>President</h3>
-                    <p>Delhi Neurological Association</p>
-                    <p class="year">2020</p>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel('awards-carousel', -1)">‹</button>
+                
+                <div class="carousel-wrapper" id="awards-carousel">
+                    
+                    <!-- Award 1 -->
+                    <div class="carousel-item">
+                        <div class="award-card">
+                            <div class="award-icon">
+    <img src="assets/icons/trophy-base-svgrepo-com.svg" alt="Trophy Icon">
+</div>
+                            <h3>Chikitsa Ratna Award</h3>
+                            <p>Indian Medical Association</p>
+                            <p class="year">July 2010</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Award 2 -->
+                    <div class="carousel-item">
+                        <div class="award-card">
+                                           <div class="award-icon">
+    <img src="assets/icons/gem-svgrepo-com.svg" alt="Gem Icon">
+</div>
+                            <h3>Gems of the Gems Award</h3>
+                            <p>Gems Delhi</p>
+                            <p class="year">2014</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Award 3 -->
+                    <div class="carousel-item">
+                        <div class="award-card">
+                                           <div class="award-icon">
+    <img src="assets/icons/degree-diploma-svgrepo-com.svg" alt="Trophy Icon">
+</div>
+                            <h3>Distinguished Alumnus Award</h3>
+                            <p>Gems</p>
+                            <p class="year">2015</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Award 4 -->
+                    <div class="carousel-item">
+                        <div class="award-card">
+                                           <div class="award-icon">
+    <img src="assets/icons/medal-svgrepo-com.svg" alt="Trophy Icon">
+</div>
+                            <h3>Certificate of Honour</h3>
+                            <p>High School Excellence</p>
+                            <p class="year">1971</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Award 5 -->
+                    <div class="carousel-item">
+                        <div class="award-card">
+                                          <div class="award-icon">
+    <img src="assets/icons/books-svgrepo-com.svg" alt="Trophy Icon">
+</div>
+                            <h3>National Merit Scholarship</h3>
+                            <p>M.B.B.S (4.5 years)</p>
+                            <p class="year">1974-1979</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="award-card">
-                    <div class="award-icon">📋</div>
-                    <h3>NSI - BOE</h3>
-                    <p>North India Chairman</p>
-                    <p class="year">Current</p>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">🎯</div>
-                    <h3>President Elected</h3>
-                    <p>Delhi Neurological Association</p>
-                    <p class="year">2019</p>
-                </div>
-            </div>
-
-            <h3 style="color: var(--primary); margin: 3rem 0 2rem; font-size: 1.5rem;">Professional Memberships</h3>
-            <div class="memberships-grid">
-                <div class="membership-item">
-                    <h4>Life Member - Neurological Society of India</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Life Member - Neurotrauma Society of India</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Life Member - Indian Medical Association</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Life Member - Neurological Surgeons Society of India</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Life Member - Cerebrovascular Society of India</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Life Member - Skull Base Society of India</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Member - Indian Society for Stereotactic and Functional Neurosurgery</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Member - Delhi Medical Association</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Member - Association of Surgeons of India</h4>
-                </div>
-
-                <div class="membership-item">
-                    <h4>Joint Secretary - Delhi Neurological Association (2002-04)</h4>
-                </div>
+                
+                <button class="carousel-btn next" onclick="scrollCarousel('awards-carousel', 1)">›</button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ============================================
+         MEMBERSHIPS SECTION
+         Professional memberships and leadership roles
+         ============================================ -->
+
+
+<section id="memberships">
+  <div class="container">
+    <h2 class="section-title">Professional Memberships & Leadership</h2>
+
+    <div class="memberships-grid">
+      <!-- LEFT: Leadership Positions -->
+      <div class="leadership-section">
+        <h3 class="subheading">Leadership Positions</h3>
+        <div class="leadership-grid">
+          <div class="leadership-card">
+            <div class="award-icon">👔</div>
+            <h4>President</h4>
+            <p>Delhi Neurological Association</p>
+            <p class="year">2020</p>
+          </div>
+          <div class="leadership-card">
+            <div class="award-icon">📋</div>
+            <h4>NSI - BOE</h4>
+            <p>North India Chairman</p>
+            <p class="year">Current</p>
+          </div>
+          <div class="leadership-card">
+            <div class="award-icon">🎯</div>
+            <h4>President Elect</h4>
+            <p>Delhi Neurological Association</p>
+            <p class="year">2019</p>
+          </div>
+          <div class="leadership-card">
+            <div class="award-icon">📝</div>
+            <h4>Joint Secretary</h4>
+            <p>Delhi Neurological Association</p>
+            <p class="year">2002-04</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Professional Memberships -->
+      <div class="memberships-list">
+        <h3 class="subheading">Professional Memberships</h3>
+        <ul>
+          <li>Life Member – Neurological Society of India</li>
+          <li>Life Member – Neurotrauma Society of India</li>
+          <li>Life Member – Indian Medical Association</li>
+          <li>Life Member – Neurological Surgeons Society of India</li>
+          <li>Life Member – Cerebrovascular Society of India</li>
+          <li>Life Member – Skull Base Society of India</li>
+          <li>Member – Indian Society for Stereotactic and Functional Neurosurgery</li>
+          <li>Member – Delhi Medical Association</li>
+          <li>Member – Association of Surgeons of India</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ============================================
+         CONTACT SECTION
+         Contact information and location map
+         ============================================ -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Contact Information</h2>
+            
+            <!-- Contact Grid - 4 columns -->
             <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Office Address</h3>
-                    <div class="contact-item">
-                        <div>
-                            <p><strong>Director-Professor and Consultant</strong></p>
-                            <p>Department of Neurosurgery</p>
-                            <p>Head of Unit II</p>
-                            <p>Room No. 527, Academic Block</p>
-                            <p>G.B. Pant Institute of Postgraduate Medical Education and Research</p>
-                            <p>New Delhi - 110002</p>
-                        </div>
-                    </div>
+                
+                <!-- Office Address -->
+              <div class="contact-item">
+                    <h3>📍 Office</h3>
+                    <a href="https://share.google/AqM0SmeJGWB8Kzqla" target="_blank" class="address-link">
+                     <p>Dept. of Neurosurgery, Room 527</p>
+                     <p>G.B. Pant Institute, New Delhi - 110002</p>
+                    </a>
                 </div>
 
-                <div class="contact-card">
-                    <h3>Correspondence Address</h3>
-                    <div class="contact-item">
-                        <div>
-                            <p>51/13, Old Rajender Nagar</p>
-                            <p>New Delhi - 110060</p>
-                        </div>
-                    </div>
+
+                <!-- Phone Numbers -->
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p><strong>Office:</strong> <a href="tel:+911123236355">+91-11-23236355</a></p>
+                    <p><strong>Mobile:</strong> <a href="tel:+918447034425">+91-8447034425</a></p>
                 </div>
 
-                <div class="contact-card">
-                    <h3>Phone Numbers</h3>
-                    <div class="contact-item">
-                        <strong>Office:</strong>
-                        <div>
-                            <p>+918447034425</p>
-                            <p>+918447034425</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Mobile:</strong>
-                        <div>
-                            <p>+918447034425</p>
-                            <p>+918447034425</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Residence:</strong>
-                        <div>
-                            <p>+918447034425</p>
-                        </div>
-                    </div>
+                <!-- Registration Details -->
+                <div class="contact-item">
+                    <h3>🏥 Registration</h3>
+                    <p>Delhi Medical Council</p>
+                    <p>Reg. No: 6394</p>
                 </div>
 
-                <div class="contact-card">
-                    <h3>Registration</h3>
-                    <div class="contact-item">
-                        <div>
-                            <p><strong>Delhi Medical Council</strong></p>
-                            <p>Registration No: 6394</p>
-                        </div>
-                    </div>
+                <!-- Embedded Google Map -->
+                <div class="contact-item map-container">
+                    <h3>📍 Location</h3>
+                    <!-- Google Maps Embed for G.B. Pant Hospital -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6820933808367!2d77.2344969!3d28.6392886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcd80ec13561%3A0x8941ec4bf9184f80!2sGovind%20Ballabh%20Pant%20Hospital!5e0!3m2!1sen!2sin!4v1761792388691!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ============================================
+         FOOTER
+         Copyright and credits
+         ============================================ -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Dr. Arvind Kumar Srivastava. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Neurosurgeon | Academic Leader | Researcher</p>
+            <p>&copy; 2025 Dr. Arvind Kumar Srivastava. All rights reserved.</p>
+            <!-- <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><a href="https://www.ideaclicks.in/" target="_blank">Created by IdeaClicks</p> -->
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+  <a href="https://www.ideaclicks.in/" target="_blank" style="color: white; text-decoration: none;">
+    Created by IdeaClicks
+  </a>
+</p>
+
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<!-- Floating buttons  -->
+  <div class="floating-buttons">
+  <a href="tel:+918447034425">
+    <img src="assets/img/call.png" alt="Call Button">
+  </a>
+  <a href="https://wa.me/918447034425" target="_blank">
+    <img src="assets/img/whatsapp.png" alt="WhatsApp Button">
+  </a>
+</div>
+<!-- Floating Buttons Ends  --> 
 
-        // Add scroll animation for elements
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        // Observe cards and items
-        document.querySelectorAll('.expertise-card, .education-card, .publication-item, .award-card, .research-card').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Active navigation highlight
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('nav a').forEach(a => {
-                a.style.opacity = '0.7';
-                if (a.getAttribute('href') === `#${current}`) {
-                    a.style.opacity = '1';
-                }
-            });
-        });
-    </script>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
