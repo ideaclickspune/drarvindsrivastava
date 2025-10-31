@@ -61,7 +61,7 @@
             <li><a href="#about" onclick="closeMenu()">About</a></li>
             <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
             <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-            <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+            <li><a href="#education" onclick="closeMenu()">Qualifications</a></li>            
             <li><a href="#awards" onclick="closeMenu()">Awards</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
@@ -498,54 +498,92 @@
          CONTACT SECTION
          Contact information and location map
          ============================================ -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Information</h2>
+   <!-- ============================================
+     CONTACT SECTION
+     Contact information and location map
+     ============================================ -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Information</h2>
+        
+        <!-- Contact Grid - 4 columns -->
+        <div class="contact-grid">
             
-            <!-- Contact Grid - 4 columns -->
-            <div class="contact-grid">
+            <!-- Office Address with Social Media -->
+            <div class="contact-item">
+                <h3>📍 Office</h3>
+                <!-- Clickable address that opens in Google Maps -->
+                <a href="https://www.google.com/maps/search/?api=1&query=G.B.+Pant+Institute+of+Postgraduate+Medical+Education+and+Research+New+Delhi" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="contact-link">
+                    <p>Dept. of Neurosurgery, Room 527</p>
+                    <p>G.B. Pant Institute, New Delhi - 110002</p>
+                </a>
                 
-                <!-- Office Address -->
-              <div class="contact-item">
-                    <h3>📍 Office</h3>
-                    <a href="https://share.google/AqM0SmeJGWB8Kzqla" target="_blank" class="address-link">
-                     <p>Dept. of Neurosurgery, Room 527</p>
-                     <p>G.B. Pant Institute, New Delhi - 110002</p>
-                    </a>
-                </div>
-
-
-                <!-- Phone Numbers -->
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p><strong>Office:</strong> <a href="tel:+911123236355">+91-11-23236355</a></p>
-                    <p><strong>Mobile:</strong> <a href="tel:+918447034425">+91-8447034425</a></p>
-                </div>
-
-                <!-- Registration Details -->
-                <div class="contact-item">
-                    <h3>🏥 Registration</h3>
-                    <p>Delhi Medical Council</p>
-                    <p>Reg. No: 6394</p>
-                </div>
-
-                <!-- Embedded Google Map -->
-                <div class="contact-item map-container">
-                    <h3>📍 Location</h3>
-                    <!-- Google Maps Embed for G.B. Pant Hospital -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6820933808367!2d77.2344969!3d28.6392886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcd80ec13561%3A0x8941ec4bf9184f80!2sGovind%20Ballabh%20Pant%20Hospital!5e0!3m2!1sen!2sin!4v1761792388691!5m2!1sen!2sin" 
-                        width="100%" 
-                        height="200" 
-                        style="border:0; border-radius: 8px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <!-- Social Media Icons -->
+                <div class="contact-social-media">
+                    <h4>Connect With Us</h4>
+                    <div class="contact-social-icons">
+                        <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="mailto:email@example.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Phone Numbers (Now Clickable) -->
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p>
+                    <strong>Office:</strong> 
+                    <a href="tel:+911123236355" class="contact-link">+91-11-2323-6355</a>
+                </p>
+                <p>
+                    <strong>Mobile:</strong> 
+                    <a href="tel:+918447034425" class="contact-link">+91-8447 03 4425</a>
+                </p>
+            </div>
+
+            <!-- Registration Details -->
+            <div class="contact-item">
+                <h3>🏥 Registration</h3>
+                <p>Delhi Medical Council</p>
+                <p>Reg. No: 6394</p>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="contact-item map-container">
+                <h3>📍 Location</h3>
+                <!-- Google Maps Embed for G.B. Pant Hospital -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6820933808367!2d77.2344969!3d28.6392886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcd80ec13561%3A0x8941ec4bf9184f80!2sGovind%20Ballabh%20Pant%20Hospital!5e0!3m2!1sen!2sin!4v1761893852576!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ============================================
          FOOTER
@@ -557,7 +595,7 @@
             <!-- <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><a href="https://www.ideaclicks.in/" target="_blank">Created by IdeaClicks</p> -->
                 <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
   <a href="https://www.ideaclicks.in/" target="_blank" style="color: white; text-decoration: none;">
-    Created by IdeaClicks
+    Created by IdeaClicks<sup>®</sup>
   </a>
 </p>
 

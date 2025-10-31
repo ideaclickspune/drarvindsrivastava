@@ -1073,6 +1073,130 @@ section {
 
 
 /* ============================================
+   CONTACT SECTION - SOCIAL MEDIA ICONS
+   ============================================ */
+
+/* Social media container in contact section */
+.contact-social-media {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-social-media h4 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 600;
+}
+
+/* Social icons container */
+.contact-social-icons {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Individual social media icon button */
+.contact-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Social icon hover effect */
+.contact-social-icons a:hover {
+    transform: translateY(-3px) scale(1.1);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Platform-specific colors on hover */
+.contact-social-icons a:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.contact-social-icons a:hover .fa-twitter {
+    color: #1da1f2;
+}
+
+.contact-social-icons a:hover .fa-linkedin-in {
+    color: #0a66c2;
+}
+
+.contact-social-icons a:hover .fa-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-social-icons a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.contact-social-icons a:hover .fa-envelope {
+    color: var(--primary);
+}
+
+
+/* ============================================
+   CONTACT SECTION MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    
+    /* Contact grid - single column */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+    }
+
+    .contact-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Social media mobile adjustments */
+    .contact-social-media {
+        margin-top: 1.2rem;
+        padding-top: 0.8rem;
+    }
+
+    .contact-social-media h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Slightly smaller icons on mobile */
+    .contact-social-icons {
+        gap: 0.7rem;
+    }
+
+    .contact-social-icons a {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+}
+/* ============================================
    FOOTER
    ============================================ */
 
