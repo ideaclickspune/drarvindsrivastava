@@ -190,7 +190,7 @@ nav a:hover {
 
 .hero {
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(14, 165, 233, 0.95) 100%),
-                url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600') center/cover;
+                url('') center/cover;
     color: white;
     padding: 2rem 2rem;
     text-align: center;
