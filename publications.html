@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Publications & Research - Dr. Arvind Kumar Srivastava</title>
+    <meta name="title" content="Publications & Research - Dr. Arvind Kumar Srivastava">
+    <meta name="description" content="Research publications, thesis supervisions, and academic contributions by Dr. Arvind Kumar Srivastava in neurosurgery.">
+    <meta name="keywords" content="neurosurgery research, medical publications, brain surgery research, Dr Arvind Kumar Srivastava publications">
+    <meta name="author" content="Dr. Arvind Kumar Srivastava">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="IN-DL">
+    <meta name="geo.placename" content="New Delhi">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1e40af">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Additional styles specific to publications page */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            margin-top: 115px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .publications-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .section-divider {
+            background: var(--light);
+            padding: 3rem 2rem;
+            margin: 3rem -2rem;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .publication-item p {
+            color: #475569;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .thesis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .thesis-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .thesis-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .thesis-card h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .thesis-card .year {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            background: #f0f9ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+        }
+
+        .research-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--accent);
+        }
+
+        .stat-card .number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .label {
+            color: #475569;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            padding: 0.5rem 0;
+            color: #475569;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-box li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 3rem 1rem 2rem;
+                margin-top: 70px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .publications-container {
+                padding: 2rem 1rem;
+            }
+
+            .thesis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-divider {
+                padding: 2rem 1rem;
+                margin: 2rem -1rem;
+            }
+
+            .research-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- ============================================
+         NAVIGATION BAR WITH DROPDOWN
+         ============================================ -->
+    <nav>
+            <!-- ==================== Preloader ==================== -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. Arvind Logo" class="loader-logo">
+    <div class="spinner"></div>
+    <p class="loading-text">Connecting neurons</p>
+  </div>
+</div>
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. A.K. Srivastava Logo" class="logo-image">
+            </a>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul id="navMenu">
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                
+                <!-- About Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="experience.html">Experience</a>
+                        <a href="expertise.html">Expertise</a>
+                        <a href="qualification.html">Qualification</a>
+                        <a href="patent.html">Patent</a>
+                        <a href="publications.html">Publications</a>
+                        <a href="awards.html">Lecture Awards</a>
+                    </div>
+                </li>
+                
+                <li><a href="index.html#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="index.html#testimonials" onclick="closeMenu()">Testimonials</a></li>
+                <li><a href="index.html#contact" onclick="closeMenu()">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <!-- <section class="page-header">
+        <h1>Publications & Research</h1>
+        <p>Advancing Neurosurgical Knowledge Through Research and Academic Excellence</p>
+    </section> -->
+
+    <!-- Main Content -->
+    <div class="publications-container">
+                <div class="container">
+            <h2 class="section-title">Publications & Research</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #475569; font-size: 1.1rem;">
+                Advancing Neurosurgical Knowledge Through Research and Academic Excellence
+            </p>
+        
+        <!-- Research Statistics -->
+        <div class="research-stats">
+            <div class="stat-card">
+                <span class="number">100+</span>
+                <span class="label">Publications</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">17</span>
+                <span class="label">Thesis Supervisions</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">40+</span>
+                <span class="label">Conference Papers</span>
+            </div>
+        </div>
+
+        <!-- Recent Publications -->
+        <div class="section-header">
+            <h2>Recent Publications</h2>
+        </div>
+
+        <div class="publication-item">
+            <p>Jagetia A, Singh D, <strong>Srivastava AK</strong>, Singh AK. History of The Department of Neurosurgery, G. B. Pant Hospital, New Delhi. <em>Neurol India</em>. 2017; 65(6):1366-1377.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Gupta RK, Saran RK, <strong>Srivastava AK</strong>, Jagetia A, Garg L, Sharma MC. T cell lymphoblastic lymphoma/leukemia within an adrenocorticotropic hormone and thyroid stimulating hormone positive pituitary adenoma: A cytohistological correlation emphasizing importance of intra-operative squash smear. <em>Neuropathology</em>. 2017; 37(4):358-364.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Kumar V, Jagetia A, Singh D, <strong>Srivastava AK</strong>, Tandon MS. Comparison of Efficacy of Intraoperative Indocyanine Green Video angiography in Clipping of Anterior Circulation Aneurysms with Postoperative Digital Subtraction Angiography. <em>J Neurosci Rural Pract</em>. 2017; 8(3):342-345.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Garg M, Sachdeva D, <strong>Srivastava AK</strong>. Post v-p shunt surgical site edh an uncommon complication: case report. <em>Romanian Neurosurgery</em>. 2017; 31(2): 253-256.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Dutta G, Jagetia A, <strong>Srivastava AK</strong>, Singh D, Singh H, Saran RK. A "crick" in the neck followed by massage offered him a stroke: An uncommon case of vertebral artery dissection. <em>World Neurosurg</em>. 2018 Apr 10. pii: S1878-8750(18)30724-1.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Dutta G, Singh D, Singh H, <strong>Srivastava AK</strong>, Jagetia A, Agrawal A. Dorsal hemangioblastoma manifesting as holocord syringomyelia. <em>Surg Neurol Int</em> 2018; 9:73.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Dutta G, Singh D, Singh H, <strong>Srivastava AK</strong>, Jagetia A, Sachdeva D. Pituitary fossa chondrosarcoma: An unusual cause of a sellar suprasellar mass masquerading as pituitary adenoma. <em>Surg Neurol Int</em> 2018: 9:76.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Microvascular decompression for Trigeminal neuralgia: Experience of a tertiary care center in India and a brief review of literature. <em>Neurology India</em> March-April/2021/Vol.69/ Supplement 1.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>Intra-operative cerebral blood flow assessment by indocyanine green video-angiography during temporary arterial occlusion in aneurysm surgery and its correlation with post-operative diffusion-weighted MRI.</p>
+        </div>
+
+        <div class="publication-item">
+            <p>An institutional experience of fenestrated T bar clip use in management of intracranial aneurysms. <em>Neurology India</em>.</p>
+        </div>
+
+        <!-- Additional Topics -->
+        <div class="info-box">
+            <h3><i class="fas fa-file-medical" style="color: var(--accent); margin-right: 0.5rem;"></i>Additional Research Topics</h3>
+            <ul>
+                <li>Understanding the course of vertebral artery at CV junction in occipital assimilation of atlas</li>
+                <li>Post VP Shunt surgical site EDH - An uncommon complication</li>
+                <li>T-Cell Lymphoblastic lymphoma/leukemia within ACTH and TSH positive pituitary adenoma</li>
+                <li>Phenytoin induced fatal drug reactions in two patients with brain tumors</li>
+                <li>Meningeal osteochondroma simulating meningioma with metaplastic change</li>
+                <li>Intramedullary cervical neurocysticercosis</li>
+                <li>Scalp and intracranial metastasis from pleomorphic adenocarcinoma of the parotid gland</li>
+                <li>Subclavian-Vertebral artery angle: A predictor of success of vertebral artery access in posterior circulation aneurysms</li>
+            </ul>
+        </div>
+
+        <!-- Thesis Supervisions Section -->
+        <div class="section-divider">
+            <div class="section-header">
+                <h2>Thesis Supervisions (Supervisor/Co-supervisor)</h2>
+            </div>
+
+            <div class="thesis-grid">
+                <div class="thesis-card">
+                    <h4>Role of MR Tractography in preoperative planning and postoperative evaluation in brain tumors</h4>
+                    <span class="year">2003-2006</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Endoscopic assisted microsurgical excision of cerebellopontine angle masses: A prospective study</h4>
+                    <span class="year">2009-2012</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Intraoperative monitoring of trigeminal and facial nerve and outcome after cerebellopontine angle surgery</h4>
+                    <span class="year">2010-2013</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Evaluation of the role of stereotactic biopsy in the diagnosis of neoplastic and nonneoplastic lesions</h4>
+                    <span class="year">2011-2014</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>A study of surgical outcome in patients with chiari malformation Type I</h4>
+                    <span class="year">2012-2015</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Role of intraoperative Indocyanine green videoangiography in parasagittal and convexity meningioma surgery</h4>
+                    <span class="year">2013-2016</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Clinicopathological and Radiological analysis of posterior fossa tumors and treatment outcome</h4>
+                    <span class="year">2014-2017</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Craniosynostosis: To study the spectrum and outcome of surgical intervention</h4>
+                    <span class="year">2014-2017</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Study on Morphometric parameters of posterior cranial fossa in chiari malformation type-1</h4>
+                    <span class="year">2015-2018</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Estimation of Serum IL6, IL10 and TNF alfa and its correlation with tumor volume and grade</h4>
+                    <span class="year">2015-2018</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Association of SOX 17 gene with intracranial aneurysm</h4>
+                    <span class="year">2019-2021</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Assessment of association between xrcc7 gene polymorphisms and glioma: A prospective observational study</h4>
+                    <span class="year">2019-2021</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Assessment of Neurocognitive function and functional independence before and after surgery in supratentorial glioma</h4>
+                    <span class="year">2018-2020</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Factors affecting surgical outcome in patients of trigeminal neuralgia following microvascular decompression surgery</h4>
+                    <span class="year">2018-2020</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Surgical and functional outcome following intracranial aneurysm surgery</h4>
+                    <span class="year">2018-2020</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Assessment of Surgical outcome in suboccipital approach for lesions located in Pineal region</h4>
+                    <span class="year">2017-2020</span>
+                </div>
+
+                <div class="thesis-card">
+                    <h4>Morphometric analysis of bony and vascular structures in CV Jn. Anomaly</h4>
+                    <span class="year">Recent</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Work -->
+        <div class="info-box">
+            <h3><i class="fas fa-microscope" style="color: var(--accent); margin-right: 0.5rem;"></i>Ongoing Research Areas</h3>
+            <ul>
+                <li>Role of Hyperbaric oxygen in craniocerebral trauma</li>
+                <li>Morphometric characterization of Inner and outer membrane of Chronic Subdural Hematoma</li>
+                <li>Pituitary stalk in severe head injury</li>
+            </ul>
+        </div>
+
+        <!-- Thesis Work -->
+        <div class="info-box" style="background: #fff7ed; border-color: #f97316;">
+            <h3><i class="fas fa-book" style="color: #f97316; margin-right: 0.5rem;"></i>Doctoral Thesis</h3>
+            <ul>
+                <li><strong>M.S. (General Surgery):</strong> Laparoscopic Diagnosis of Lesions of Liver</li>
+                <li><strong>M.Ch. (Neurosurgery):</strong> Craniocerebral Trauma in Infancy and Childhood</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dr. Arvind Kumar Srivastava. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                <a href="https://www.ideaclicks.in/" target="_blank" style="color: white; text-decoration: none;">
+                    Created by IdeaClicks<sup>®</sup>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+918447034425">
+            <img src="assets/img/call.png" alt="Call Button">
+        </a>
+        <a href="https://wa.me/918447034425" target="_blank">
+            <img src="assets/img/whatsapp.png" alt="WhatsApp Button">
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experience - Dr. Arvind Kumar Srivastava</title>
+    
+    <link rel="icon" type="image/png" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        /* Experience Timeline Styles */
+        #experience {
+            background: var(--light);
+            padding: 4rem 2rem;
+        }
+
+        .experience-grid {
+            position: relative;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .experience-grid::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0.4;
+        }
+
+        .exp-card {
+            position: relative;
+            width: 50%;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .exp-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .exp-card.left {
+            left: 0;
+            text-align: right;
+            transform: translateX(-60px);
+        }
+
+        .exp-card.right {
+            left: 50%;
+            transform: translateX(60px);
+        }
+
+        .exp-card.left.show,
+        .exp-card.right.show {
+            transform: translateX(0);
+        }
+
+        .exp-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .exp-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .exp-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+        .exp-content .period {
+            color: var(--accent);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-content p {
+            color: #475569;
+            font-size: 0.95rem;
+            margin: 0.2rem 0;
+        }
+
+        .exp-card::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px var(--accent);
+            z-index: 1;
+        }
+
+        .exp-card.left::before {
+            right: -8px;
+        }
+
+        .exp-card.right::before {
+            left: -8px;
+        }
+
+        @media (max-width: 768px) {
+            .experience-grid::before {
+                left: 10px;
+            }
+
+            .exp-card,
+            .exp-card.left,
+            .exp-card.right {
+                width: 100%;
+                padding-left: 2rem;
+                text-align: left;
+                left: 0;
+            }
+
+            .exp-card::before {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <!-- ==================== Preloader ==================== -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. Arvind Logo" class="loader-logo">
+    <div class="spinner"></div>
+    <p class="loading-text">Connecting neurons</p>
+  </div>
+</div>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. A.K. Srivastava Logo" class="logo-image">
+            </a>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul id="navMenu">
+                <li><a href="index.html#home" onclick="closeMenu()">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="experience.html">Experience</a>
+                        <a href="expertise.html">Expertise</a>
+                        <a href="qualification.html">Qualification</a>
+                        <a href="patent.html">Patent</a>
+                        <a href="publications.html">Publications</a>
+                        <a href="awards.html">Lecture Awards</a>
+                    </div>
+                </li>
+                
+                <li><a href="index.html#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="index.html#testimonials" onclick="closeMenu()">Testimonials</a></li>
+                <li><a href="index.html#contact" onclick="closeMenu()">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #475569; font-size: 1.1rem;">
+                Over 40 years of distinguished service in neurosurgery, spanning leading medical institutions across India.
+            </p>
+
+            <div class="experience-grid">
+                <!-- Experience 1 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>Director-Professor & Consultant</h3>
+                        <span class="period">Aug 2013 - May 2022 (9 Years)</span>
+                        <p>G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
+                        <p>Head of Unit II, In-charge Neurosurgery ICU</p>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Professor (Neurosurgery)</h3>
+                        <span class="period">Aug 2006 - Aug 2013 (7 Years)</span>
+                        <p>G.B. Pant Hospital, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>Associate Professor</h3>
+                        <span class="period">Aug 2002 - Aug 2006 (4 Years)</span>
+                        <p>G.B. Pant Hospital, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Neurosurgeon (Specialist Grade II)</h3>
+                        <span class="period">Aug 1995 - Aug 2002 (7 Years)</span>
+                        <p>Dr. Ram Manohar Lohia Hospital, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 5 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>Pool Officer (Senior Research Associate)</h3>
+                        <span class="period">Apr 1994 - Aug 1995 (1 Yr 3 Months)</span>
+                        <p>Dr. Ram Manohar Lohia Hospital, New Delhi</p>
+                        <p>Neurosurgery Department</p>
+                    </div>
+                </div>
+
+                <!-- Experience 6 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Neurosurgeon (Specialist Grade II)</h3>
+                        <span class="period">Jun 1993 - Mar 1994 (7 Months)</span>
+                        <p>Dr. Ram Manohar Lohia Hospital, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 7 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>Pool Officer (Senior Research Associate)</h3>
+                        <span class="period">Feb 1993 - Jun 1993 (4 Months)</span>
+                        <p>G.B. Pant Hospital, New Delhi</p>
+                        <p>Neurosurgery Department</p>
+                    </div>
+                </div>
+
+                <!-- Experience 8 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Senior Resident (Neurosurgery)</h3>
+                        <span class="period">Jun 1989 - Jan 1993 (3.5 Years)</span>
+                        <p>G.B. Pant Hospital, New Delhi</p>
+                        <p>Post Doctoral Student</p>
+                    </div>
+                </div>
+
+                <!-- Experience 9 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>Associate Consultant (Neurosurgery)</h3>
+                        <span class="period">May 1987 - May 1989 (2 Years)</span>
+                        <p>Rana Nursing Home, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 10 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Senior Resident (Neurosurgery)</h3>
+                        <span class="period">Apr 1984 - Apr 1987 (3 Years)</span>
+                        <p>Safdarjung Hospital, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 11 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>Registrar (Surgical Specialities)</h3>
+                        <span class="period">Jun 1983 - Feb 1984 (7 Months)</span>
+                        <p>Sir Ganga Ram Hospital, New Delhi</p>
+                    </div>
+                </div>
+
+                <!-- Experience 12 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Resident Surgical Officer</h3>
+                        <span class="period">May 1981 - May 1983 (2 Years)</span>
+                        <p>G.S.V.M. Medical College, Kanpur</p>
+                    </div>
+                </div>
+
+                <!-- Experience 13 -->
+                <div class="exp-card left">
+                    <div class="exp-content">
+                        <h3>House Officer</h3>
+                        <span class="period">May 1980 - Apr 1981 (1 Year)</span>
+                        <p>G.S.V.M. Medical College, Kanpur</p>
+                    </div>
+                </div>
+
+                <!-- Experience 14 -->
+                <div class="exp-card right">
+                    <div class="exp-content">
+                        <h3>Intern</h3>
+                        <span class="period">Apr 1979 - May 1980 (1 Yr 1 Month)</span>
+                        <p>G.S.V.M. Medical College, Kanpur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dr. Arvind Kumar Srivastava. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                <a href="https://www.ideaclicks.in/" target="_blank" style="color: white; text-decoration: none;">
+                    Created by IdeaClicks<sup>®</sup>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+918447034425">
+            <img src="assets/img/call.png" alt="Call Button">
+        </a>
+        <a href="https://wa.me/918447034425" target="_blank">
+            <img src="assets/img/whatsapp.png" alt="WhatsApp Button">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

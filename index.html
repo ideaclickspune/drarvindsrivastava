@@ -14,18 +14,16 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     
- 
     <!-- Geographic Meta Tags -->
     <meta name="geo.region" content="IN-DL">
     <meta name="geo.placename" content="New Delhi">
     <meta name="geo.position" content="28.638333;77.229999">
     <meta name="ICBM" content="28.638333, 77.229999">
-    
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Dr.Arvind_Logo_Transparent.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Dr.Arvind_Logo_Transparent.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/Dr.Arvind_Logo_Transparent.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Dr.Arvind_Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Dr.Arvind_Logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/Dr.Arvind_Logo.png">
     
     <!-- Theme Color for Mobile Browsers -->
     <meta name="theme-color" content="#1e40af">
@@ -34,587 +32,329 @@
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
-  <!-- ============================================
-     NAVIGATION BAR
-     Sticky navigation menu at the top
-     ============================================ -->
-<nav>
-    <div class="container">
-        <!-- Logo Image (replaces text logo) -->
-        <a href="index.html" class="logo-link">
-            <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. A.K. Srivastava Logo" class="logo-image">
-        </a>
-        
-        <!-- Hamburger Icon for Mobile Menu -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- ==================== Preloader ==================== -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. Arvind Logo" class="loader-logo">
+    <div class="spinner"></div>
+    <p class="loading-text">Connecting neurons</p>
+  </div>
+</div>
+<!-- ==================================================== -->
+
+    <!-- ============================================
+         NAVIGATION BAR WITH DROPDOWN
+         ============================================ -->
+    <nav>
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/Dr.Arvind_Logo_White-removebg-preview.png" alt="Dr. A.K. Srivastava Logo" class="logo-image">
+            </a>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul id="navMenu">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                
+                <!-- About Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="experience.html">Experience</a>
+                        <a href="expertise.html">Expertise</a>
+                        <a href="qualification.html">Qualification</a>
+                        <a href="patent.html">Patent</a>
+                        <a href="publications.html">Publications</a>
+                        <a href="awards.html">Lecture Awards</a>
+                    </div>
+                </li>
+                
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+            </ul>
         </div>
-        
-        <!-- Navigation Menu Items -->
-        <ul id="navMenu">
-            <li><a href="#home" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">About</a></li>
-            <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
-            <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-            <li><a href="#education" onclick="closeMenu()">Qualifications</a></li>            
-            <li><a href="#awards" onclick="closeMenu()">Awards</a></li>
-            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-    
+    </nav>
 
     <!-- ============================================
          HERO SECTION
-         Main landing section with doctor's intro
          ============================================ -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <!-- Left Side: Doctor's Information -->
             <div class="hero-content">
                 <h1>Dr. Arvind Kumar Srivastava</h1>
-                <p class="subtitle">Director-Professor & Consultant Neurosurgeon</p>
-                <p class="credentials">M.B.B.S., M.S. (Gen. Surgery), M.Ch. (Neurosurgery)</p>
-                <p class="credentials">G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
+                <!-- <p class="subtitle">Director-Professor & Consultant Neurosurgeon</p> -->
+                <p class="credentials">M.B.B.S., M.S. (Gen. Surgery),<br> M.Ch. (Neurosurgery), <br> Consultant Neurosurgeon (Brain & Spine Surgeon)</p>
+                <p class="credentials"><b>G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</b></p>
             </div>
             
-            <!-- Right Side: Doctor's Photo -->
             <div class="hero-image">
                 <img src="assets/img/Dr. Srivastav Image.png" alt="Dr. Arvind Kumar Srivastava">
             </div>
-
-            <!-- Statistics Section - Spans full width -->
-            <!-- <div class="hero-stats"> -->
-                <!-- Years of Experience Counter -->
-                <!-- <div class="stat"> -->
-                    <!-- <span class="stat-number" data-target="40">0</span> -->
-                    <!-- <span class="stat-label">Years Experience</span> -->
-                <!-- </div> -->
-                
-                <!-- Publications Counter -->
-                <!-- <div class="stat"> -->
-                    <!-- <span class="stat-number" data-target="100">0</span> -->
-                    <!-- <span class="stat-label">Publications</span> -->
-                <!-- </div> -->
-                
-                <!-- Research Supervisions Counter -->
-                <!-- <div class="stat"> -->
-                    <!-- <span class="stat-number" data-target="15">0</span> -->
-                    <!-- <span class="stat-label">Research Supervisions</span> -->
-                <!-- </div> -->
-            <!-- </div> -->
         </div>
     </section>
 
-<!-- Statistics Section -->
-<section class="stats-section">
-  <div class="stats-grid">
-    <div class="stat-box">
-      <span class="stat-number" data-target="40">40+</span>
-      <span class="stat-label">Years Experience</span>
-    </div>
-    <div class="stat-box">
-      <span class="stat-number" data-target="100">100+</span>
-      <span class="stat-label">Publications</span>
-    </div>
-    <div class="stat-box">
-      <span class="stat-number" data-target="15">15+</span>
-      <span class="stat-label">Research Supervisions</span>
-    </div>
-  </div>
-</section>
-
-
-    <!-- ============================================
-         ABOUT SECTION
-         Biography and background information
-         ============================================ -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Dr. Srivastava</h2>
-            
-            <div class="about-content">
-                <!-- Left Side: Doctor's Photo (different from hero) -->
-                <div class="about-image">
-                    <img src="assets/img/Dr.Arvind_Seating.png" alt="Dr. Arvind Kumar Srivastava">
-                </div>
-                
-                <!-- Right Side: Biography Text -->
-                <div class="about-text">
-                    <h3>Distinguished Neurosurgeon & Academic Leader</h3>
-                    <p>Dr. Arvind Kumar Srivastava is a highly accomplished neurosurgeon with over four decades of clinical excellence and academic contributions. Currently serving as Director-Professor and Consultant in the Department of Neurosurgery at G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi, he leads Unit II and oversees the Neurosurgery ICU.</p>
-                    
-                    <p>With extensive training in functional and stereotactic neurosurgery from Amsterdam Medical University, Dr. Srivastava has pioneered numerous neurosurgical techniques and contributed significantly to medical education in India. His expertise spans craniocerebral trauma, neuro-oncology, cerebrovascular diseases, and skull base surgery. He has been honored with prestigious awards including the Chikitsa Ratna Award and serves as President of the Delhi Neurological Association.</p>
-                </div>
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-number" data-target="40">40+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="100">100+</span>
+                <span class="stat-label">Publications</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="15">15+</span>
+                <span class="stat-label">Research Supervisions</span>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         EXPERTISE SECTION
-         Areas of medical specialization
+         SERVICES SECTION
          ============================================ -->
-    <section id="expertise">
+    <section id="services">
         <div class="container">
-            <h2 class="section-title">Areas of Expertise</h2>
+            <h2 class="section-title">Our Services</h2>
             
-            <!-- Grid of Expertise Cards -->
-            <div class="expertise-grid">
-                
-                <!-- Expertise Card 1 -->
-                <div class="expertise-card">
-                    <h3>Functional & Stereotactic Neurosurgery</h3>
-                    <ul>
-                        <li>Advanced training from Amsterdam Medical University</li>
-                        <li>Stereotactic biopsy procedures</li>
-                        <li>Precision-guided interventions</li>
-                    </ul>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                          <img src="assets/icons/brain-svgrepo-com.svg" alt="Brain Tumor Surgery Icon">
+                    </div>
+                    <h3>Brain Tumor Surgery</h3>
+                    <p>Advanced surgical techniques for brain tumor removal with precision and care.</p>
                 </div>
 
-                <!-- Expertise Card 2 -->
-                <div class="expertise-card">
-                    <h3>Craniocerebral & Spinal Trauma</h3>
-                    <ul>
-                        <li>Pediatric and adult head injury management</li>
-                        <li>Spinal cord injury care</li>
-                        <li>Emergency neurosurgical interventions</li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <!-- <div class="service-icon"> -->
+  <img src="assets/icons/spine-svgrepo-com.svg" alt="Spinal Surgery Icon">
+                    </div>
+                    <h3>Spinal Surgery</h3>
+                    <p>Comprehensive treatment for spinal cord injuries and disorders.</p>
                 </div>
 
-                <!-- Expertise Card 3 -->
-                <div class="expertise-card">
-                    <h3>Neuro-Oncology</h3>
-                    <ul>
-                        <li>Brain tumor surgery</li>
-                        <li>MR tractography-guided resections</li>
-                        <li>Intraoperative monitoring</li>
-                    </ul>
-                </div>
-
-                <!-- Expertise Card 4 -->
-                <div class="expertise-card">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-head-side-virus"></i>
+                    </div>
                     <h3>Skull Base Surgery</h3>
-                    <ul>
-                        <li>Cerebellopontine angle masses</li>
-                        <li>Endoscope-assisted microsurgery</li>
-                        <li>Complex skull base approaches</li>
-                    </ul>
+                    <p>Complex skull base procedures using endoscope-assisted microsurgery.</p>
                 </div>
 
-                <!-- Expertise Card 5 -->
-                <div class="expertise-card">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/brain-and-head-svgrepo-com.svg" alt="Spinal Surgery Icon">
+                    </div>
                     <h3>Cerebrovascular Surgery</h3>
-                    <ul>
-                        <li>Intracranial aneurysm surgery</li>
-                        <li>Indocyanine green videoangiography</li>
-                        <li>Arteriovenous malformations</li>
-                    </ul>
+                    <p>Treatment of aneurysms and arteriovenous malformations.</p>
                 </div>
 
-                <!-- Expertise Card 6 -->
-                <div class="expertise-card">
-                    <h3>Specialized Procedures</h3>
-                    <ul>
-                        <li>Microvascular decompression for trigeminal neuralgia</li>
-                        <li>Chiari malformation surgery</li>
-                        <li>Craniosynostosis correction</li>
-                        <li>Pineal region lesions</li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Stereotactic Neurosurgery</h3>
+                    <p>Precision-guided interventions and stereotactic biopsy procedures.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Neurosurgery</h3>
+                    <p>24/7 emergency care for traumatic brain and spinal injuries.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         EXPERIENCE SECTION
-         Professional career timeline (Horizontal Carousel)
+         TESTIMONIALS SECTION
          ============================================ -->
- 
-
-    <!-- Exoerience section ChatGpt  -->
-<section id="experience">
-  <div class="container">
-    <h2 class="section-title">Professional Experience</h2>
-
-    <div class="experience-grid">
-
-      <!-- Step 1 -->
-      <div class="exp-card left">
-        <div class="exp-content">
-          <h3>Director-Professor & Consultant</h3>
-          <span class="period">Aug 2013 - May 2022 (9 Years)</span>
-          <p>G.B. Pant Institute of Postgraduate Medical Education and Research, New Delhi</p>
-          <p>Head of Unit II, In-charge Neurosurgery ICU</p>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="exp-card right">
-        <div class="exp-content">
-          <h3>Professor (Neurosurgery)</h3>
-          <span class="period">Aug 2006 - Aug 2013 (7 Years)</span>
-          <p>G.B. Pant Hospital, New Delhi</p>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="exp-card left">
-        <div class="exp-content">
-          <h3>Associate Professor</h3>
-          <span class="period">Aug 2002 - Aug 2006 (4 Years)</span>
-          <p>G.B. Pant Hospital, New Delhi</p>
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="exp-card right">
-        <div class="exp-content">
-          <h3>Neurosurgeon (Specialist Grade II)</h3>
-          <span class="period">Aug 1995 - Aug 2002 (7 Years)</span>
-          <p>Dr. Ram Manohar Lohia Hospital, New Delhi</p>
-        </div>
-      </div>
-
-      <!-- Step 5 -->
-      <div class="exp-card left">
-        <div class="exp-content">
-          <h3>Senior Resident (Neurosurgery)</h3>
-          <span class="period">Jun 1989 - Jan 1993 (3.5 Years)</span>
-          <p>G.B. Pant Hospital, New Delhi</p>
-          <p>Post Doctoral Student</p>
-        </div>
-      </div>
-
-      <!-- Step 6 -->
-      <div class="exp-card right">
-        <div class="exp-content">
-          <h3>Senior Resident (Neurosurgery)</h3>
-          <span class="period">Apr 1984 - Apr 1987 (3 Years)</span>
-          <p>Safdarjung Hospital, New Delhi</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    
-    <!-- Experience Section ChatGpt END  -->
-
-
-    <!-- ============================================
-         EDUCATION SECTION
-         Academic qualifications (Horizontal Carousel)
-         ============================================ -->
-<section id="education">
-  <div class="container">
-    <h2 class="section-title">Academic Qualifications</h2>
-
-    <div class="education-grid">
-      <!-- Education Card 1 -->
-      <div class="education-card">
-        <h3>M.Ch. (Neurosurgery)</h3>
-        <p class="institution">University of Delhi</p>
-        <p class="institution">G.B. Pant Hospital, Maulana Azad Medical College</p>
-        <p class="year">June 1991 - First Attempt</p>
-      </div>
-
-      <!-- Education Card 2 -->
-      <div class="education-card">
-        <h3>M.S. (General Surgery)</h3>
-        <p class="institution">University of Kanpur</p>
-        <p class="institution">G.S.V.M. Medical College</p>
-        <p class="year">May 1983 - First Attempt</p>
-      </div>
-
-      <!-- Education Card 3 -->
-      <div class="education-card">
-        <h3>M.B.B.S.</h3>
-        <p class="institution">University of Kanpur</p>
-        <p class="institution">G.S.V.M. Medical College</p>
-        <p class="year">February 1979 - All Subjects First Attempt</p>
-      </div>
-
-      <!-- Education Card 4 -->
-      <div class="education-card">
-        <h3>Specialized Training</h3>
-        <p class="institution">Functional and Stereotactic Neurosurgery</p>
-        <p class="institution">Amsterdam Medical University</p>
-        <p class="year">Netherlands</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-   
-    <!-- ============================================
-         AWARDS SECTION
-         Awards and recognitions (Horizontal Carousel)
-         ============================================ -->
-    <section id="awards">
+    <section id="testimonials">
         <div class="container">
-            <h2 class="section-title">Awards & Recognition</h2>
+            <h2 class="section-title">What Patients Say</h2>
             
-            <div class="carousel-container">
-                <button class="carousel-btn prev" onclick="scrollCarousel('awards-carousel', -1)">‹</button>
+            <div class="testimonials-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel('testimonials-carousel', -1)">‹</button>
                 
-                <div class="carousel-wrapper" id="awards-carousel">
-                    
-                    <!-- Award 1 -->
+                <div class="carousel-wrapper" id="testimonials-carousel">
                     <div class="carousel-item">
-                        <div class="award-card">
-                            <div class="award-icon">
-    <img src="assets/icons/trophy-base-svgrepo-com.svg" alt="Trophy Icon">
-</div>
-                            <h3>Chikitsa Ratna Award</h3>
-                            <p>Indian Medical Association</p>
-                            <p class="year">July 2010</p>
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Dr. Srivastava performed my brain surgery with exceptional skill. His expertise and compassionate care made a difficult journey much easier. I'm forever grateful."</p>
+                            <div class="testimonial-author">
+                                <h4>Rajesh Kumar</h4>
+                                <p>Brain Tumor Patient</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Award 2 -->
+
                     <div class="carousel-item">
-                        <div class="award-card">
-                                           <div class="award-icon">
-    <img src="assets/icons/gem-svgrepo-com.svg" alt="Gem Icon">
-</div>
-                            <h3>Gems of the Gems Award</h3>
-                            <p>Gems Delhi</p>
-                            <p class="year">2014</p>
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"After my spinal surgery, I can walk again without pain. Dr. Srivastava's expertise changed my life. Highly recommended for any neurosurgical needs."</p>
+                            <div class="testimonial-author">
+                                <h4>Priya Sharma</h4>
+                                <p>Spinal Surgery Patient</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Award 3 -->
+
                     <div class="carousel-item">
-                        <div class="award-card">
-                                           <div class="award-icon">
-    <img src="assets/icons/degree-diploma-svgrepo-com.svg" alt="Trophy Icon">
-</div>
-                            <h3>Distinguished Alumnus Award</h3>
-                            <p>Gems</p>
-                            <p class="year">2015</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Award 4 -->
-                    <div class="carousel-item">
-                        <div class="award-card">
-                                           <div class="award-icon">
-    <img src="assets/icons/medal-svgrepo-com.svg" alt="Trophy Icon">
-</div>
-                            <h3>Certificate of Honour</h3>
-                            <p>High School Excellence</p>
-                            <p class="year">1971</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Award 5 -->
-                    <div class="carousel-item">
-                        <div class="award-card">
-                                          <div class="award-icon">
-    <img src="assets/icons/books-svgrepo-com.svg" alt="Trophy Icon">
-</div>
-                            <h3>National Merit Scholarship</h3>
-                            <p>M.B.B.S (4.5 years)</p>
-                            <p class="year">1974-1979</p>
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The best neurosurgeon in Delhi. Dr. Srivastava treated my father with utmost care and professionalism. His experience truly shows in his work."</p>
+                            <div class="testimonial-author">
+                                <h4>Amit Patel</h4>
+                                <p>Patient's Family</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <button class="carousel-btn next" onclick="scrollCarousel('awards-carousel', 1)">›</button>
+                <button class="carousel-btn next" onclick="scrollCarousel('testimonials-carousel', 1)">›</button>
             </div>
         </div>
     </section>
-
-    <!-- ============================================
-         MEMBERSHIPS SECTION
-         Professional memberships and leadership roles
-         ============================================ -->
-
-
-<section id="memberships">
-  <div class="container">
-    <h2 class="section-title">Professional Memberships & Leadership</h2>
-
-    <div class="memberships-grid">
-      <!-- LEFT: Leadership Positions -->
-      <div class="leadership-section">
-        <h3 class="subheading">Leadership Positions</h3>
-        <div class="leadership-grid">
-          <div class="leadership-card">
-            <div class="award-icon">👔</div>
-            <h4>President</h4>
-            <p>Delhi Neurological Association</p>
-            <p class="year">2020</p>
-          </div>
-          <div class="leadership-card">
-            <div class="award-icon">📋</div>
-            <h4>NSI - BOE</h4>
-            <p>North India Chairman</p>
-            <p class="year">Current</p>
-          </div>
-          <div class="leadership-card">
-            <div class="award-icon">🎯</div>
-            <h4>President Elect</h4>
-            <p>Delhi Neurological Association</p>
-            <p class="year">2019</p>
-          </div>
-          <div class="leadership-card">
-            <div class="award-icon">📝</div>
-            <h4>Joint Secretary</h4>
-            <p>Delhi Neurological Association</p>
-            <p class="year">2002-04</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT: Professional Memberships -->
-      <div class="memberships-list">
-        <h3 class="subheading">Professional Memberships</h3>
-        <ul>
-          <li>Life Member – Neurological Society of India</li>
-          <li>Life Member – Neurotrauma Society of India</li>
-          <li>Life Member – Indian Medical Association</li>
-          <li>Life Member – Neurological Surgeons Society of India</li>
-          <li>Life Member – Cerebrovascular Society of India</li>
-          <li>Life Member – Skull Base Society of India</li>
-          <li>Member – Indian Society for Stereotactic and Functional Neurosurgery</li>
-          <li>Member – Delhi Medical Association</li>
-          <li>Member – Association of Surgeons of India</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 
     <!-- ============================================
          CONTACT SECTION
-         Contact information and location map
          ============================================ -->
-   <!-- ============================================
-     CONTACT SECTION
-     Contact information and location map
-     ============================================ -->
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact Information</h2>
-        
-        <!-- Contact Grid - 4 columns -->
-        <div class="contact-grid">
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
             
-            <!-- Office Address with Social Media -->
-            <div class="contact-item">
-                <h3>📍 Office</h3>
-                <!-- Clickable address that opens in Google Maps -->
-                <a href="https://www.google.com/maps/search/?api=1&query=G.B.+Pant+Institute+of+Postgraduate+Medical+Education+and+Research+New+Delhi" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="contact-link">
-                    <p>Dept. of Neurosurgery, Room 527</p>
-                    <p>G.B. Pant Institute, New Delhi - 110002</p>
-                </a>
-                
-                <!-- Social Media Icons -->
-                <div class="contact-social-media">
-                    <h4>Connect With Us</h4>
-                    <div class="contact-social-icons">
-                        <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="mailto:email@example.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📍 Office</h3>
+                    <a href="https://www.google.com/maps/search/?api=1&query=G.B.+Pant+Institute+of+Postgraduate+Medical+Education+and+Research+New+Delhi" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="contact-link">
+                        <p>Dept. of Neurosurgery, Room 527</p>
+                        <p>G.B. Pant Institute, New Delhi - 110002</p>
+                    </a>
+                    
+                    <div class="contact-social-media">
+                        <h4>Connect With Us</h4>
+                        <div class="contact-social-icons">
+                            <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="mailto:email@example.com" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Phone Numbers (Now Clickable) -->
-            <div class="contact-item">
-                <h3>📞 Phone</h3>
-                <p>
-                    <strong>Office:</strong> 
-                    <a href="tel:+911123236355" class="contact-link">+91-11-2323-6355</a>
-                </p>
-                <p>
-                    <strong>Mobile:</strong> 
-                    <a href="tel:+918447034425" class="contact-link">+91-8447 03 4425</a>
-                </p>
-            </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>
+                        <strong>Office:</strong> 
+                        <a href="tel:+911123236355" class="contact-link">+91-11-2323-6355</a>
+                    </p>
+                    <p>
+                        <br>
+                        <strong>Mobile:</strong>
+                        <a href="tel:+919810166457" class="contact-link">+91-9810-166-457</a><br>
+                        <a href="tel:+919718599354" class="contact-link">+91-9718-599-354</a><br>
+                        <a href="tel:+918447034425" class="contact-link">+91-8447-034-425</a>
+                    </p>
+                </div>
 
-            <!-- Registration Details -->
-            <div class="contact-item">
-                <h3>🏥 Registration</h3>
-                <p>Delhi Medical Council</p>
-                <p>Reg. No: 6394</p>
-            </div>
+                <div class="contact-item">
+                    <h3>🏥 Registration</h3>
+                    <p>Delhi Medical Council</p>
+                    <p>Reg. No: 6394</p>
+                    <br>
+                        <strong>📧 Email:</strong>
+                        <a href="mailto:aksrivastava57@yahoo.co.in" class="contact-link">aksrivastava57@yahoo.co.in</a><br>
+                        <a href="mailto:aksrivastava2008@gmail.com" class="contact-link">aksrivastava2008@gmail.com</a><br>
+                </div>
 
-            <!-- Embedded Google Map -->
-            <div class="contact-item map-container">
-                <h3>📍 Location</h3>
-                <!-- Google Maps Embed for G.B. Pant Hospital -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6820933808367!2d77.2344969!3d28.6392886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcd80ec13561%3A0x8941ec4bf9184f80!2sGovind%20Ballabh%20Pant%20Hospital!5e0!3m2!1sen!2sin!4v1761893852576!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="200" 
-                    style="border:0; border-radius: 8px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <div class="contact-item map-container">
+                    <h3>📍 Location</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6820933808367!2d77.2344969!3d28.6392886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcd80ec13561%3A0x8941ec4bf9184f80!2sGovind%20Ballabh%20Pant%20Hospital!5e0!3m2!1sen!2sin!4v1761893852576!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- ============================================
-         FOOTER
-         Copyright and credits
-         ============================================ -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Dr. Arvind Kumar Srivastava. All rights reserved.</p>
-            <!-- <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><a href="https://www.ideaclicks.in/" target="_blank">Created by IdeaClicks</p> -->
-                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-  <a href="https://www.ideaclicks.in/" target="_blank" style="color: white; text-decoration: none;">
-    Created by IdeaClicks<sup>®</sup>
-  </a>
-</p>
-
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                <a href="https://www.ideaclicks.in/" target="_blank" style="color: white; text-decoration: none;">
+                    Created by IdeaClicks<sup>®</sup>
+                </a>
+            </p>
         </div>
     </footer>
 
-<!-- Floating buttons  -->
-  <div class="floating-buttons">
-  <a href="tel:+918447034425">
-    <img src="assets/img/call.png" alt="Call Button">
-  </a>
-  <a href="https://wa.me/918447034425" target="_blank">
-    <img src="assets/img/whatsapp.png" alt="WhatsApp Button">
-  </a>
-</div>
-<!-- Floating Buttons Ends  --> 
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+918447034425">
+            <img src="assets/img/call.png" alt="Call Button">
+        </a>
+        <a href="https://wa.me/918447034425" target="_blank">
+            <img src="assets/img/whatsapp.png" alt="WhatsApp Button">
+        </a>
+    </div>
 
-
-    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
