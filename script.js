@@ -502,3 +502,45 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// ========================
+// HERO SLIDER
+// ========================
+let currentHero = 0;
+const slides = document.querySelectorAll(".hero-slide");
+const dotsContainer = document.querySelector(".hero-dots");
+
+// Create dots dynamically
+slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("hero-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.onclick = () => showHeroSlide(i);
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".hero-dot");
+
+function showHeroSlide(index) {
+    slides[currentHero].classList.remove("active");
+    dots[currentHero].classList.remove("active");
+
+    currentHero = index;
+
+    slides[currentHero].classList.add("active");
+    dots[currentHero].classList.add("active");
+}
+
+document.querySelector(".hero-next").onclick = () => {
+    let next = currentHero + 1;
+    if (next >= slides.length) next = 0;
+    showHeroSlide(next);
+};
+
+document.querySelector(".hero-prev").onclick = () => {
+    let prev = currentHero - 1;
+    if (prev < 0) prev = slides.length - 1;
+    showHeroSlide(prev);
+};
+
+// Hero Slider JS 
+

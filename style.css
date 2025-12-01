@@ -231,7 +231,7 @@ nav a:hover {
 }
 
 .hero-content .credentials {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     margin-bottom: 1rem;
     opacity: 0.9;
 }
@@ -1091,3 +1091,4 @@ Gallery
   }
 }
 
+/* Hero Image Slider CSS */
